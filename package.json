@@ -1,0 +1,25 @@
+{
+  "name": "ifalive",
+  "version": "1.0.0",
+  "description": "Node Module Dependencies: node-cat - netcat module tcp-ping - ping port ping - ping host",
+  "main": "netcat.js",
+  "dependencies": {
+    "node-cat": "^0.3.4",
+    "ping": "^0.2.2",
+    "tcp-ping": "^0.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manubuhay/node_IfAlive.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/manubuhay/node_IfAlive/issues"
+  },
+  "homepage": "https://github.com/manubuhay/node_IfAlive#readme"
+}
