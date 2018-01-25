@@ -1,12 +1,12 @@
 var tcpp = require('tcp-ping');
 const axios = require('axios');
 
+//Creates POST request
 function notify(){
-axios.post("https://hooks.glip.com/webhook/29fcf649-f358-420a-b452-1e5407d6f4f9", {
-  "icon": "https://vignette.wikia.nocookie.net/logopedia/images/2/2c/Lazada_Icon.png",
+axios.post("https://hooks.glip.com/webhook/46efadc3-5ad7-417b-9c9a-82afdb096d1d", {
+  "icon": "http://www.qmsacademy.com/wp-content/uploads/2015/10/DevOps-logo.png",
   "activity": "TCP-PING-Hook",
-  "title": "DOWN ANG APNS!",
-  //"body": "* Location: [The Funky Buddha Lounge](http://www.thefunkybuddha.com)\n*Beer Advocate Rating: [99](http://tinyurl.com/psf4uzq)"
+  "title": "APNS DOWN!",
 });
 }
 
@@ -18,6 +18,7 @@ tcpp.probe('ec2-34-197-72-10.compute-1.amazonaws.com', 9091, function(err, avail
 	process.exit(0);
 });
  
+ // This part of the code takes description from the servers
 // tcpp.ping({ address: 'ec2-34-197-72-10.compute-1.amazonaws.com' }, function(err, data) {
 //     console.log(data); 
 // });
