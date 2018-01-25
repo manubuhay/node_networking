@@ -4,6 +4,7 @@
   "description": "Node Module Dependencies: node-cat - netcat module tcp-ping - ping port ping - ping host",
   "main": "netcat.js",
   "dependencies": {
+    "axios": "^0.17.1",
     "node-cat": "^0.3.4",
     "ping": "^0.2.2",
     "tcp-ping": "^0.1.1"
