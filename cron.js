@@ -1,7 +1,6 @@
 var tcpp = require('tcp-ping');
 const axios = require('axios');
 var CronJob = require('cron').CronJob;
-
 //Creates POST request if server is down
 function server_down(){
 axios.post("https://hooks.glip.com/webhook/e8c7f15c-ceb7-474f-a42a-560f70a036a7", {
@@ -10,7 +9,6 @@ axios.post("https://hooks.glip.com/webhook/e8c7f15c-ceb7-474f-a42a-560f70a036a7"
   "title": "APNS DOWN!",
 });
 }
-
 //Creates POST request if server is down
 function server_up(){
 axios.post("https://hooks.glip.com/webhook/e8c7f15c-ceb7-474f-a42a-560f70a036a7", {
@@ -34,7 +32,6 @@ var job = new CronJob('01 * * * * *', function(){
   'PHT'
   );
 job.start();
-
 //setInterval(function(){
 // tcpp.probe('ec2-34-197-72-10.compute-1.amazonaws.com', 9090, function(err, available) {
 //     	console.log(available);
