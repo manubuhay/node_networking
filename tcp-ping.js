@@ -3,14 +3,14 @@ const axios = require('axios');
 
 //Creates POST request
 function notify(){
-axios.post("https://hooks.glip.com/webhook/46efadc3-5ad7-417b-9c9a-82afdb096d1d", {
+axios.post("https://hooks.glip.com/webhook/e8c7f15c-ceb7-474f-a42a-560f70a036a7", {
   "icon": "http://www.qmsacademy.com/wp-content/uploads/2015/10/DevOps-logo.png",
   "activity": "TCP-PING-Hook",
   "title": "APNS DOWN!",
 });
 }
 
-tcpp.probe('ec2-34-197-72-10.compute-1.amazonaws.com', 9091, function(err, available) {
+tcpp.probe('ec2-34-197-72-10.compute-1.amazonaws.com', 8000, function(err, available) {
     console.log(available);
     if(available == false)
     notify();
