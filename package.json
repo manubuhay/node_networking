@@ -1,10 +1,9 @@
 {
-  "name": "ifalive",
+  "name": "node_networking",
   "version": "1.0.0",
-  "description": "Node Module Dependencies: node-cat - netcat module tcp-ping - ping port ping - ping host",
-  "main": "netcat.js",
+  "description": "NodeJS scripts for server checks",
+  "main": "cron.js",
   "dependencies": {
-    "axios": "^0.17.1",
     "cron": "^1.3.0",
     "node-cat": "^0.3.4",
     "ping": "^0.2.2",
@@ -16,12 +15,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/manubuhay/node_IfAlive.git"
+    "url": "git+https://github.com/manubuhay/node_networking.git"
   },
-  "author": "",
+  "author": "manu buhay",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/manubuhay/node_IfAlive/issues"
+    "url": "https://github.com/manubuhay/node_networking/issues"
   },
-  "homepage": "https://github.com/manubuhay/node_IfAlive#readme"
+  "homepage": "https://github.com/manubuhay/node_networking#readme"
 }
