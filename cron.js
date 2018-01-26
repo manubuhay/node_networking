@@ -19,7 +19,6 @@ axios.post("https://hooks.glip.com/webhook/e8c7f15c-ceb7-474f-a42a-560f70a036a7"
 }
 //Create cronjob
 var job = new CronJob('01 * * * * *', function(){
-
 	tcpp.probe('ec2-34-197-72-10.compute-1.amazonaws.com', 9090, function(err, available){
     	console.log(available);
     		if(available == false)
@@ -32,12 +31,3 @@ var job = new CronJob('01 * * * * *', function(){
   'PHT'
   );
 job.start();
-//setInterval(function(){
-// tcpp.probe('ec2-34-197-72-10.compute-1.amazonaws.com', 9090, function(err, available) {
-//     	console.log(available);
-//     		if(available == false)
-//     			server_down();
-// 			else
-// 				server_up();
-// 		});
-//}, 5000);
