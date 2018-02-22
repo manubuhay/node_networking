@@ -3,55 +3,37 @@ const axios = require('axios');
 
 //Creates POST request
 function notify(){
-axios.post("https://hooks.glip.com/webhook/e8c7f15c-ceb7-474f-a42a-560f70a036a7", {
+axios.post("https://hooks.glip.com/webhook/2e11e70d-3c99-44ef-89c7-22715dc9da6b", {
   "icon": "http://www.qmsacademy.com/wp-content/uploads/2015/10/DevOps-logo.png",
   "activity": "TCP-PING-Hook",
-  "title": "APNS DOWN!",
+  "title": "srv[i].server DOWN!",
 });
 }
-
-// tcpp.probe('ec2-34-197-72-10.compute-1.amazonaws.com', 8000, function(err, available) {
-//     console.log(available);
-//     if(available == false)
-//     notify();
-// 	else
-// 	process.exit(0);
-// });
-
-// tcpp.probe('ec2-54-165-245-68.compute-1.amazonaws.com', 4000, function(err, available) {
-//     console.log(available);
-//     if(available == false)
-//     notify();
-// 	// else
-// 	// process.exit(0);
-// });
-
-// tcpp.probe('ec2-52-7-161-56.compute-1.amazonaws.com', 8080, function(err, available) {
-//     console.log(available);
-//     if(available == false)
-//     notify();
-// 	// else
-// 	// process.exit(0);
-// });
-
-// tcpp.probe('ec2-52-20-35-81.compute-1.amazonaws.com', 8080, function(err, available) {
-//     console.log(available);
-//     if(available == false)
-//     notify();
-// 	// else
-// 	// process.exit(0);
-// });
  
  // This part of the code takes description from the servers
 // tcpp.ping({ address: 'ec2-34-197-72-10.compute-1.amazonaws.com' }, function(err, data) {
 //     console.log(data); 
 // });
 
-var server = [{server1: "ec2-34-197-72-10.compute-1.amazonaws.com", port1: "9090"},
-				{server2: "ec2-54-165-245-68.compute-1.amazonaws.com", port2: "4000"}, 
-				{server3: "ec2-52-7-161-56.compute-1.amazonaws.com", port3: "8080"},
-				{server4: "ec2-52-20-35-81.compute-1.amazonaws.com", port4: "8080"} ]
+var srv = [{host: "ec2-34-197-72-10.compute-1.amazonaws.com", port: 9090},
+				{host: "ec2-54-165-245-68.compute-1.amazonaws.com", port: 4000}, 
+				{host: "ec2-52-7-161-56.compute-1.amazonaws.com", port: 8080},
+				{host: "ec2-52-20-35-81.compute-1.amazonaws.com", port: 8080} ]
  
-console.log(server[0].server1);
-console.log(server[1].port2);
-console.log(server[2].port3);
+// console.log(srv[0].host);
+// console.log(srv[1].port);
+// console.log(srv[2].port);
+
+for ( i=0; i < srv.length; i++){
+	let host = srv[i].host
+	console.log(host)
+	let port = srv[i].port
+	console.log(port)
+	tcpp.probe(host, port, function(err, available) {
+    console.log(available);
+    if(available == false)
+    notify();
+	else
+	process.exit(0);
+});
+}
