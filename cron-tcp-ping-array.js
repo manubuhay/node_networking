@@ -17,7 +17,7 @@ axios.post("https://hooks.glip.com/webhook/2e11e70d-3c99-44ef-89c7-22715dc9da6b"
   "icon": "http://www.qmsacademy.com/wp-content/uploads/2015/10/DevOps-logo.png",
   "activity": "TCP-PING-Hook",
   "title":  host + " is DOWN!",
-		}  );
+		} );
 	}
 
 var task = new CronJob('10 * * * * *', function()
