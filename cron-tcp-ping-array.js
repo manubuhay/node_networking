@@ -8,8 +8,8 @@ var srv = [ {host: "ec2-34-197-72-10.compute-1.amazonaws.com", port: 9097},
 		    {host: "ec2-52-7-161-56.compute-1.amazonaws.com", port: 8088},
 		    {host: "ec2-52-20-35-81.compute-1.amazonaws.com", port: 8089} 
 		  ]
-
-//Creates POST request
+var j = 0;  //counter how many times we executed tcpp-probe
+//creates POST request
 function notify(host)
 	{
 axios.post("https://hooks.glip.com/webhook/2e11e70d-3c99-44ef-89c7-22715dc9da6b", 
@@ -22,8 +22,8 @@ axios.post("https://hooks.glip.com/webhook/2e11e70d-3c99-44ef-89c7-22715dc9da6b"
 
 var task = new CronJob('10 * * * * *', 
 	function()
-		{
-		for ( i = 0; i < srv.length; i++)
+		{ 
+		for ( i = 0; i < srv.length; i++ )
 			{
 				let host = srv[i].host, port = srv[i].port
 				tcpp.probe(host, port, function(err, available) 
@@ -34,8 +34,8 @@ var task = new CronJob('10 * * * * *',
 						console.log(host + " is down!")
 						}
 				}		   );
-	 		}	var j = 0; j = j + 1;
-	 			console.log("--------------------------------------------------" + j)
+	 		}	j = j + 1;
+	 			console.log("--------------------------------------------------> " + j)
 		}, true, 'PHT');
 task.start();
 
