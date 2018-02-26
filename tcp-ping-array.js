@@ -2,9 +2,9 @@ var tcpp = require('tcp-ping');
 const axios = require('axios');
 
 var srv = [ {host: "ec2-34-197-72-10.compute-1.amazonaws.com", port: 9097},
-		    {host: "ec2-54-165-245-68.compute-1.amazonaws.com", port: 4000}, 
-		    {host: "ec2-52-7-161-56.compute-1.amazonaws.com", port: 8080},
-		    {host: "ec2-52-20-35-81.compute-1.amazonaws.com", port: 8080} 
+		    {host: "ec2-54-165-245-68.compute-1.amazonaws.com", port: 4002}, 
+		    {host: "ec2-52-7-161-56.compute-1.amazonaws.com", port: 8088},
+		    {host: "ec2-52-20-35-81.compute-1.amazonaws.com", port: 8089} 
 		  ]
 
 //Creates POST request

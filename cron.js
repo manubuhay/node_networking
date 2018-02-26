@@ -24,7 +24,7 @@ var job = new CronJob('01 * * * * *', function(){
     		if(available == false)
     			server_down();
 			else
-				server_up();
+				  server_up();
 		});
 },
   true,
