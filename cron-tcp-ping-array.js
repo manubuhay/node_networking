@@ -3,10 +3,10 @@ const axios = require('axios');
 var CronJob = require('cron').CronJob;
 
 
-var srv = [ {host: "ec2-34-197-72-10.compute-1.amazonaws.com", port: 9097},
-		    {host: "ec2-54-165-245-68.compute-1.amazonaws.com", port: 4002}, 
-		    {host: "ec2-52-7-161-56.compute-1.amazonaws.com", port: 8088},
-		    {host: "ec2-52-20-35-81.compute-1.amazonaws.com", port: 8089} 
+var srv = [ {host: "<server_ip_or_fqdn>", port: 9097},
+		    {host: "<server_ip_or_fqdn>", port: 4002}, 
+		    {host: "<server_ip_or_fqdn>", port: 8088},
+		    {host: "<server_ip_or_fqdn>", port: 8089} 
 		  ]
 var j = 0;  //counter how many times we executed tcpp-probe
 //creates POST request
